@@ -8,13 +8,39 @@ namespace BalancingTDD
 {
     public class Program
     {
-        public static string Name { get; set; }
         static void Main(string[] args)
         {
             Console.WriteLine("Hola Mundo!");
             
             Console.ReadKey();
+
         }
+
+        public static bool CheckParentesis(string input)
+        {
+            bool ret = false;
+            bool foundOpen = false;
+            bool foundClose = false;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i].Equals('('))
+                {
+                    foundOpen = true;
+                }
+                if (input[i].Equals(')'))
+                {
+                    foundClose = true;
+                }
+            }
+
+            if (foundOpen || foundClose)
+            {
+                ret = false;
+            }
+            return ret;
+        }
+        
 
     }
 }

@@ -20,19 +20,25 @@ namespace BalancingTDD
         {
             bool ret = false;
             bool foundOpen = false;
+            int countOpen = 0;
             bool foundClose = false;
-
+            int countClose = 0;
+            int foundCounting = 0;
             for (int i = 0; i < input.Length; i++)
             {
                 if (input[i].Equals('('))
                 {
                     foundOpen = true;
+                    countOpen++;
                 }
                 if (input[i].Equals(')'))
                 {
+                    countClose++;
                     if (foundOpen)
                     {
                         foundClose = true;
+                        foundCounting++;
+                        foundOpen = false;
                     }
                 }
             }
@@ -42,7 +48,12 @@ namespace BalancingTDD
                 ret = false;
             }
 
-            if (foundClose && foundOpen)
+            if (foundClose && foundOpen )
+            {
+                ret = true;
+            }
+
+            if (foundCounting > 0 && countOpen.Equals(countClose))
             {
                 ret = true;
             }

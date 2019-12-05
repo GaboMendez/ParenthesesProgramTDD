@@ -146,5 +146,108 @@ namespace UnitTest
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod]
+        public void TestMethod_11()
+        {
+            // input con 2 parentesis abiertos y 1 parentesis cerrado
+            //Assemble
+            bool expectedResult = false;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("a(a(a)aa");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+
+        [TestMethod]
+        public void TestMethod_12()
+        {
+            // input con 1 parentesis abiertos y 2 parentesis cerrado
+            //Assemble
+            bool expectedResult = false;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("a(a)a)aa");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+
+        [TestMethod]
+        public void TestMethod_13()
+        {
+            // input con 3 parentesis abiertos y 1 parentesis cerrado
+            //Assemble
+            bool expectedResult = false;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("a(a(a(aa)");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void TestMethod_14()
+        {
+            // input con 1 parentesis abiertos y 4 parentesis cerrado
+            //Assemble
+            bool expectedResult = false;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("a(a)aa)a)a)");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void TestMethod_15()
+        {
+            // input con par de parentesis abiertos y par de parentesis cerrado
+            //Assemble
+            bool expectedResult = true;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("a(a)a(a)a(a)a(a)");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void TestMethod_16()
+        {
+            // input con N parentesis abiertos
+            //Assemble
+            bool expectedResult = false;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("(((((((a((((aaa((a");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void TestMethod_17()
+        {
+            // input con N parentesis cerrados
+            //Assemble
+            bool expectedResult = false;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("))aa))aaa))aa))");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+
+
     }
 }

@@ -30,13 +30,21 @@ namespace BalancingTDD
                 }
                 if (input[i].Equals(')'))
                 {
-                    foundClose = true;
+                    if (foundOpen)
+                    {
+                        foundClose = true;
+                    }
                 }
             }
 
             if (foundOpen || foundClose)
             {
                 ret = false;
+            }
+
+            if (foundClose && foundOpen)
+            {
+                ret = true;
             }
             return ret;
         }

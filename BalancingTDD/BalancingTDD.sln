@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalancingTDD", "BalancingTDD\BalancingTDD.csproj", "{1D93CF70-0C20-446C-A081-55A6B4EAEF5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{9793977D-D9D4-454B-943A-FC1AB1885918}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1D93CF70-0C20-446C-A081-55A6B4EAEF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D93CF70-0C20-446C-A081-55A6B4EAEF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D93CF70-0C20-446C-A081-55A6B4EAEF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9793977D-D9D4-454B-943A-FC1AB1885918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9793977D-D9D4-454B-943A-FC1AB1885918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9793977D-D9D4-454B-943A-FC1AB1885918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9793977D-D9D4-454B-943A-FC1AB1885918}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

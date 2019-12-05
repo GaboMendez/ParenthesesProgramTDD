@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace BalancingTDD
 {
-    class Program
+    public class Program
     {
+        public static string Name { get; set; }
         static void Main(string[] args)
         {
             Console.WriteLine("Hola Mundo!");
+            
             Console.ReadKey();
         }
+
     }
 }

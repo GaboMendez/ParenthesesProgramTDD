@@ -247,6 +247,51 @@ namespace UnitTest
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [TestMethod]
+        public void TestMethod_18()
+        {
+            // input con inpar parentesis abiertos y par parentesis cerrado
+            //Assemble
+            bool expectedResult = false;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("a(a)a(a(a)");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+
+        [TestMethod]
+        public void TestMethod_19()
+        {
+            // input con par parentesis abiertos y inpar parentesis cerrado
+            //Assemble
+            bool expectedResult = false;
+
+            //Act
+            bool actualResult = Program.CheckParentesis("a(aaa(a)");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void TestMethod_20()
+        {
+            // input con operaciones matematicas y N cantidad de parentencias abierto 
+                                        //y N cantidad de parentencias cerrado 
+                                        
+            //Assemble
+            bool expectedResult = true;
+
+            //Act N = 3
+            bool actualResult = Program.CheckParentesis("a(a)a(a)(a)");
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
 
 
     }
